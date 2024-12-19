@@ -1,40 +1,50 @@
 import Link from 'next/link';
-import React from 'react';
-import Image from 'next/image';
+import { IoHome } from 'react-icons/io5';
+import { FaUser, FaUsers } from 'react-icons/fa';
+import Login from './login';
 
-function MidumeNave() {
-	const headerData = [
-		{ name: 'Home', link: '/', image: '/home.png' },
-		{ name: 'Profile', link: '/profile', image: '/noAvatar.png' },
-		{ name: 'Friends', link: '/friends', image: '/friends.png' },
-		{ name: 'Group', link: '/group', image: '/groups.png' },
-		{ name: 'Stories', link: '/stories', image: '/stories.png' },
-		{ name: 'Login', link: '/login', image: '/work.png' },
+function MidumeNavbar() {
+	const leftHeaderData = [
+		{ name: 'Home', link: '/', icon: <IoHome /> },
+		{ name: 'Profile', link: '/profile', icon: <FaUser /> },
+		{ name: 'Friends', link: '/friends', icon: <FaUsers /> },
 	];
 
 	return (
-		<nav className=''>
-			<ul className='flex flex-col md:flex-row justify-center md:justify-start'>
-				{headerData.map((item, index) => (
-					<li
-						key={index}
-						className='m-2'>
-						<Link
-							href={item.link}
-							className='flex gap-3  items-center text-gray-700 hover:scale-90 p-2 rounded-lg transition-all duration-200'>
-							<Image
-								src={item.image}
-								alt={`${item.name} icon`}
-								width={20}
-								height={20}
-							/>
-							<span className='mt-2 text-sm'>{item.name}</span>
-						</Link>
-					</li>
-				))}
-			</ul>
-		</nav>
+		<div className='flex justify-between items-center w-full'>
+			{/* Left Navigation */}
+			<div>
+				<ul className='flex flex-col md:flex-row justify-center md:justify-start'>
+					{leftHeaderData.map((item) => (
+						<li
+							key={item.name}
+							className='m-2'>
+							<Link
+								href={item.link}
+								className={`flex gap-3 items-center font-semibold text-blue-500 hover:scale-90 p-2 rounded-lg transition-all duration-200`}>
+								{item.icon}
+								<span className='text-sm'>{item.name}</span>
+							</Link>
+						</li>
+					))}
+				</ul>
+			</div>
+			{/*middle navigation */}
+			<div className='hidden w-full  lg:flex justify-center items-center'>
+				<div className='relative'>
+					<input
+						type='search'
+						className='w-[300px] rounded-lg border-gray-200 outline-none  p-4 pe-12 text-sm shadow-sm'
+						placeholder='Search'
+					/>
+				</div>
+			</div>
+			{/* Right Navigation */}
+			<div>
+				<Login />
+			</div>
+		</div>
 	);
 }
 
-export default MidumeNave;
+export default MidumeNavbar;

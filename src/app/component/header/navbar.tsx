@@ -4,8 +4,8 @@ import MobileNav from './MobileNav';
 
 function Navbar() {
 	return (
-		<div className='bg-slate-200  text-blue-600 w-full px-3 md:px-8 lg:px-16 p-3 md:p-5'>
-			<div className=' container  m-auto'>
+		<div className='bg-white  text-blue-600 w-full px-3 md:px-8 lg:px-10  p-3'>
+			<div className=' container   m-auto'>
 				<div className='hidden md:hidden lg:flex'>
 					<LargNav />
 				</div>

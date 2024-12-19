@@ -4,11 +4,11 @@ import MidumeNave from './MidumeNave';
 
 function LargNav() {
 	return (
-		<div className=' flex justify-between  items-center  w-full '>
-			<div>
+		<div className='grid grid-cols-6   w-full '>
+			<div className='col-span-2 lg:col-span-1 text-nowrap p-4'>
 				<Logo />
 			</div>
-			<div>
+			<div className='md:col-span-4 lg:col-span-5 px-5'>
 				<MidumeNave />
 			</div>
 		</div>
