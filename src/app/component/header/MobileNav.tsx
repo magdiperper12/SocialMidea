@@ -40,7 +40,7 @@ function MobileNav() {
 						} origin-left duration-200`}></div>
 
 					{isOpen && (
-						<div className='absolute start-0 top-12 w-full gap-1 text-lg  bg-white h-[calc(100vh-48px)] flex flex-col justify-center items-center'>
+						<div className='absolute start-0 top-12 w-full gap-1 text-lg  bg-white h-[calc(100vh-48px)] z-10 duration-200  flex flex-col justify-center items-center'>
 							<ul className='flex flex-col md:flex-row justify-center md:justify-start'>
 								{headerData.map((item, index) => (
 									<li

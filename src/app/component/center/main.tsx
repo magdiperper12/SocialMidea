@@ -9,6 +9,9 @@ function Main() {
 			<Stories />
 			<Addposts />
 			<Feed />
+			<Feed />
+			<Feed />
+			<Feed />
 		</div>
 	);
 }

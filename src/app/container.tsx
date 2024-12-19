@@ -6,7 +6,7 @@ import LeftSide from './component/leftside/left-side';
 function Container() {
 	return (
 		<div className='grid grid-cols-12 w-full lg:px-16 md:px-8 px-3 py-5'>
-			<div className=' lg:col-span-2 bg-blue-500 hidden lg:flex'>
+			<div className=' lg:col-span-2 hidden lg:flex'>
 				<LeftSide />
 			</div>
 			<div className='col-span-12 md:col-span-8 lg:col-span-7'>
