@@ -44,7 +44,7 @@ function Media() {
 	return (
 		<div className='flex flex-col gap-3'>
 			<div className='flex justify-between items-center'>
-				<div className='text-lg'>Friend Requests</div>
+				<div className='text-lg'>Media</div>
 				<button
 					onClick={handleToggleShow}
 					className='text-blue-600'>

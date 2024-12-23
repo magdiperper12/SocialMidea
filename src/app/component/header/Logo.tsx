@@ -1,12 +1,13 @@
 import Link from 'next/link';
 import React from 'react';
+import { SlSocialFoursqare } from 'react-icons/sl';
 
 function Logo() {
 	return (
 		<Link
 			href={'/'}
-			className='text-blue-600  text-lg md:text-xl lg:text-2xl font-bold flex gap-3  items-center   '>
-			Historic Social
+			className='text-blue-600  text-xl md:text-2xl lg:text-3xl xl:text-5xl font-bold flex justify-start ps-5  items-center   '>
+			<SlSocialFoursqare />
 		</Link>
 	);
 }

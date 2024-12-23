@@ -28,14 +28,14 @@ export default function RootLayout({
 				{/*  className={roboto.className}> */}
 				<body>
 					<Navbar />
-					<div className='grid grid-cols-12 w-full lg:px-16 md:px-8 px-3 py-5 bg-slate-100 min-h-screen container m-auto '>
-						<div className=' lg:col-span-2 hidden lg:flex'>
+					<div className='grid grid-cols-12 w-full xl:px-16 lg:px-10 md:px-5 px-0 py-5 bg-slate-100 min-h-screen container m-auto '>
+						<div className=' lg:col-span-2 hidden xl:flex'>
 							<LeftSide />
 						</div>
-						<div className='col-span-12 md:col-span-8 lg:col-span-7'>
+						<div className='col-span-12 md:col-span-8 xl:col-span-7'>
 							{children}
 						</div>
-						<div className=' md:col-span-4 lg:col-span-3  hidden md:flex'>
+						<div className=' md:col-span-4 xl:col-span-3  hidden md:flex'>
 							<RightSide />
 						</div>
 					</div>

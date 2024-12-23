@@ -23,3 +23,16 @@ body {
 .scroll-hidden::-webkit-scrollbar {
 	display: none;
 }
+
+@keyframes timer {
+	0% {
+		width: 0%;
+	}
+	100% {
+		width: 100%;
+	}
+}
+
+.animate-timer {
+	animation: timer 12s linear forwards;
+}
