@@ -9,9 +9,15 @@ import image4 from '../../../../assets/image4.jpg';
 import image5 from '../../../../assets/image5.webp';
 import image6 from '../../../../assets/image6.webp';
 import Link from 'next/link';
+import { StaticImageData } from 'next/image'; // Import StaticImageData
+
+interface Story {
+	name: string;
+	image: StaticImageData | string; // Type for image
+}
 
 function Stories() {
-	const story = [
+	const story: Story[] = [
 		{ name: 'ahmed', image: image },
 		{ name: 'magdi', image: image2 },
 		{ name: 'abdelsallam el nabulsi', image: image3 },
@@ -33,13 +39,14 @@ function Stories() {
 	];
 
 	const [show, setShow] = useState(false);
-	const [photo, setPhoto] = useState(null);
+	const [photo, setPhoto] = useState<StaticImageData | string | null>(null); // Type the state
 
-	const handellShow = (imageselect) => {
+	// Explicitly type the parameter `imageselect`
+	const handellShow = (imageselect: StaticImageData | string) => {
 		setShow(true);
 		setPhoto(imageselect);
 
-		// اغلاق تلقائي بعد 12 ثانية
+		// Close automatically after 12 seconds
 		setTimeout(() => {
 			setShow(false);
 		}, 12000);
@@ -59,19 +66,23 @@ function Stories() {
 						<div className='absolute bottom-0 left-0 h-1  bg-blue-600 animate-timer'></div>
 						<div className='gap-2 p-1 flex justify-center absolute top-0 left-0 items-center'>
 							<div className='w-10 h-10 bg-black overflow-hidden rounded-full border-blue-400 border-2 gap-2 flex justify-center items-center'>
-								<Image
-									src={photo}
-									alt=''
-									className='object-cover w-44'
-								/>
+								{photo && (
+									<Image
+										src={photo}
+										alt=''
+										className='object-cover w-44'
+									/>
+								)}
 							</div>
 							<span className='text-blue-200 '>magdi perper</span>
 						</div>
-						<Image
-							src={photo}
-							alt=''
-							className='object-contain '
-						/>
+						{photo && (
+							<Image
+								src={photo}
+								alt=''
+								className='object-contain '
+							/>
+						)}
 					</div>
 				</div>
 			)}
