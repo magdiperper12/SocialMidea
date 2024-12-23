@@ -6,25 +6,26 @@ import Image from 'next/image';
 import { BsEmojiSmileFill, BsCalendar2EventFill } from 'react-icons/bs';
 import { MdInsertPhoto } from 'react-icons/md';
 import { FaVideo, FaPencil } from 'react-icons/fa6';
+import { EmojiClickData } from 'emoji-picker-react';
 
 const EmojiPicker = dynamic(() => import('emoji-picker-react'), { ssr: false });
 
 function Addposts() {
 	const [show, setShow] = useState(false);
 	const [text, setText] = useState(''); // State for textarea value
-	const [video, setVideo] = useState(null); // State for storing selected video
-	const [photo, setPhoto] = useState(null); // State for storing selected photo
+	const [video, setVideo] = useState<string | null>(null); // State for storing selected video
+	const [photo, setPhoto] = useState<string | null>(null); // State for storing selected photo
 
 	const handleShow = () => {
 		setShow(!show);
 	};
 
-	const handleEmojiClick = (emojiObject) => {
+	const handleEmojiClick = (emojiObject: EmojiClickData) => {
 		setText((prevText) => prevText + emojiObject.emoji); // Append emoji to textarea value
 	};
 
-	const handleVideoChange = (e) => {
-		const file = e.target.files[0];
+	const handleVideoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+		const file = e.target.files?.[0];
 		if (file && file.type.startsWith('video/')) {
 			setVideo(URL.createObjectURL(file)); // Preview the video
 		} else {
@@ -32,8 +33,8 @@ function Addposts() {
 		}
 	};
 
-	const handlePhotoChange = (e) => {
-		const file = e.target.files[0];
+	const handlePhotoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+		const file = e.target.files?.[0];
 		if (file && file.type.startsWith('image/')) {
 			setPhoto(URL.createObjectURL(file)); // Preview the photo
 		} else {
@@ -78,7 +79,7 @@ function Addposts() {
 						{/* Video Upload */}
 						<div
 							className='flex justify-center items-center hover:text-gray-700 hover:scale-90 scale-95 duration-150 gap-1'
-							onClick={() => document.getElementById('video-input').click()}>
+							onClick={() => document.getElementById('video-input')?.click()}>
 							<FaVideo />
 							Video
 							<input
@@ -93,7 +94,7 @@ function Addposts() {
 						{/* Photo Upload */}
 						<div
 							className='flex justify-center items-center hover:text-gray-700 hover:scale-90 scale-95 duration-150 gap-1'
-							onClick={() => document.getElementById('photo-input').click()}>
+							onClick={() => document.getElementById('photo-input')?.click()}>
 							<MdInsertPhoto />
 							Photo
 							<input
