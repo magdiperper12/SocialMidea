@@ -1,8 +1,6 @@
 import React from 'react';
-import { FaBirthdayCake, FaUser, FaUsers } from 'react-icons/fa';
+import { FaUser, FaUsers } from 'react-icons/fa';
 import { MdPhotoLibrary } from 'react-icons/md';
-import { MdEvent } from 'react-icons/md';
-import { MdWork } from 'react-icons/md';
 
 function Information() {
 	return (

@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import image from '../../../../assets/image1.webp';
 import image2 from '../../../../assets/image2.webp';
 import image3 from '../../../../assets/image3.jpg';

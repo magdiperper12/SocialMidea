@@ -9,9 +9,11 @@ import Link from 'next/link';
 
 const Login = () => {
 	const { user } = useUser();
-	const [dropdownType, setDropdownType] = useState(null);
+	const [dropdownType, setDropdownType] = useState<
+		'message' | 'notification' | null
+	>(null);
 
-	const toggleDropdown = (type) => {
+	const toggleDropdown = (type: 'message' | 'notification') => {
 		setDropdownType((prev) => (prev === type ? null : type));
 	};
 
@@ -40,7 +42,7 @@ const Login = () => {
 								</div>
 							</button>
 							{dropdownType === 'message' && (
-								<div className='absolute right-0 top-10 w-80 bg-white shadow-lg rounded-lg p-4  h-96 transition-opacity duration-300 border border-gray-200'>
+								<div className='absolute right-0 top-10 w-80 bg-white shadow-lg rounded-lg p-4 h-96 transition-opacity duration-300 border border-gray-200'>
 									{/* Messages Header */}
 									<div className='flex items-center justify-between border-b pb-2 mb-2'>
 										<h3 className='text-lg font-semibold text-gray-800'>
@@ -70,40 +72,6 @@ const Login = () => {
 											</div>
 											<span className='text-xs text-gray-500'>2m</span>
 										</li>
-										<li className='flex items-start space-x-3 p-2 hover:bg-gray-100 rounded'>
-											<img
-												src='https://randomuser.me/api/portraits/men/20.jpg'
-												alt='User'
-												className='w-10 h-10 rounded-full'
-											/>
-											<div className='flex-1'>
-												<p className='text-sm font-medium text-gray-900'>
-													Jane Smith
-												</p>
-												<p className='text-sm text-gray-700 truncate text-wrap'>
-													Thanks for sending the file over. I'll review it
-													later.
-												</p>
-											</div>
-											<span className='text-xs text-gray-500'>10m</span>
-										</li>
-										<li className='flex items-start justify-start space-x-3 p-2 hover:bg-gray-100 rounded'>
-											<img
-												src='https://randomuser.me/api/portraits/men/93.jpg'
-												alt='User'
-												className='w-10 h-10 rounded-full'
-											/>
-											<div className='flex-1'>
-												<p className='text-sm font-medium text-gray-900'>
-													John Doe
-												</p>
-												<p className='text-sm text-gray-700 truncate text-wrap'>
-													Hey! Are you free to talk at about the project today?
-												</p>
-											</div>
-											<span className='text-xs text-gray-500'>28m</span>
-										</li>
-
 										{/* Add more message items here */}
 									</ul>
 
@@ -158,38 +126,6 @@ const Login = () => {
 													</span>{' '}
 													liked your post.{' '}
 													<span className='text-gray-500'>2m ago</span>
-												</p>
-											</div>
-										</li>
-										<li className='flex items-start space-x-3 p-2 hover:bg-gray-100 rounded'>
-											<img
-												src='https://randomuser.me/api/portraits/men/32.jpg'
-												alt='User'
-												className='w-10 h-10 rounded-full'
-											/>
-											<div>
-												<p className='text-sm text-gray-700'>
-													<span className='font-medium text-gray-900'>
-														John Doe
-													</span>{' '}
-													liked your post.{' '}
-													<span className='text-gray-500'>4m ago</span>
-												</p>
-											</div>
-										</li>
-										<li className='flex items-start space-x-3 p-2 hover:bg-gray-100 rounded'>
-											<img
-												src='https://randomuser.me/api/portraits/men/12.jpg'
-												alt='User'
-												className='w-10 h-10 rounded-full'
-											/>
-											<div>
-												<p className='text-sm text-gray-700'>
-													<span className='font-medium text-gray-900'>
-														Jane Smith
-													</span>{' '}
-													commented on your photo.{' '}
-													<span className='text-gray-500'>5m ago</span>
 												</p>
 											</div>
 										</li>
