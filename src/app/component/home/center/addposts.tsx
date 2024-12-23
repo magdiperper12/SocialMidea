@@ -1,5 +1,5 @@
 import React from 'react';
-import image from '../../../assets/image6.webp';
+import image from '../../../../assets/image6.webp';
 import Image from 'next/image';
 import { BsEmojiSmileFill, BsCalendar2EventFill } from 'react-icons/bs';
 import { MdInsertPhoto } from 'react-icons/md';
@@ -23,7 +23,7 @@ function Addposts() {
 						<textarea
 							name=''
 							id=''
-							className='w-full bg-blue-50 rounded-lg outline-none  p-1 px-2'
+							className='w-full bg-slate-100 rounded-lg outline-none  p-1 px-2'
 							placeholder='what is your mind ..?'></textarea>
 						<div>
 							<BsEmojiSmileFill className='text-yellow-600 text-xl mx-1 ' />

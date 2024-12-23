@@ -1,11 +1,11 @@
 import React from 'react';
-import image from '../../../assets/image1.webp';
-import image2 from '../../../assets/image2.webp';
+import image from '../../../../assets/image1.webp';
+import image2 from '../../../../assets/image2.webp';
 import Image from 'next/image';
 
 function Follower() {
 	return (
-		<div className='w-full  bg-white rounded-lg shadow-md mx-3  p-3   flex flex-col justify-center items-center'>
+		<div className='   flex flex-col justify-center items-center'>
 			<div className='flex flex-col items-center'>
 				<div className='w-full h-24 rounded-lg overflow-hidden'>
 					<Image
@@ -26,9 +26,11 @@ function Follower() {
 			<div className='text-xs font-bold text-gray-500'>
 				500 <span className='text-blue-500 text-sm'>followers</span>
 			</div>
-			<button className='bg-blue-600 text-white px-10 py-2 rounded-lg mt-2 text-sm hover:bg-blue-800 duration-150 hover:scale-95'>
+			<a
+				href={'/component/profile'}
+				className='bg-blue-600 text-white px-3 py-2 rounded-lg mt-2 text-sm hover:bg-blue-800 duration-150 hover:scale-95'>
 				My Profile
-			</button>
+			</a>
 		</div>
 	);
 }

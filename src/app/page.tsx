@@ -1,11 +1,9 @@
-import Navbar from '@/app/component/header/navbar';
-import Container from './container';
+import Main from './component/home/center/main';
 
 export default function Home() {
 	return (
-		<div className='bg-slate-100 min-h-screen container m-auto '>
-			<Navbar />
-			<Container />
+		<div>
+			<Main />
 		</div>
 	);
 }

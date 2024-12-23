@@ -5,7 +5,7 @@ import Feed from './feed';
 
 function Main() {
 	return (
-		<div className='space-y-4'>
+		<div className='space-y-5'>
 			<Stories />
 			<Addposts />
 			<Feed />

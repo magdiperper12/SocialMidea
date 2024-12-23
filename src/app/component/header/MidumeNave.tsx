@@ -6,8 +6,8 @@ import Login from './login';
 function MidumeNavbar() {
 	const leftHeaderData = [
 		{ name: 'Home', link: '/', icon: <IoHome /> },
-		{ name: 'Profile', link: '/profile', icon: <FaUser /> },
-		{ name: 'Friends', link: '/friends', icon: <FaUsers /> },
+		{ name: 'Profile', link: '/component/profile', icon: <FaUser /> },
+		{ name: 'Friends', link: '/component/friends', icon: <FaUsers /> },
 	];
 
 	return (
@@ -19,12 +19,12 @@ function MidumeNavbar() {
 						<li
 							key={item.name}
 							className='m-2'>
-							<Link
+							<a
 								href={item.link}
 								className={`flex gap-3 items-center font-semibold text-blue-500 hover:scale-90 p-2 rounded-lg transition-all duration-200`}>
 								{item.icon}
 								<span className='text-sm'>{item.name}</span>
-							</Link>
+							</a>
 						</li>
 					))}
 				</ul>

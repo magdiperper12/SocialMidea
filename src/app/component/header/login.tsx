@@ -26,7 +26,7 @@ function Login() {
 				{!user ? (
 					<Link
 						href='/sign-up'
-						className='m-3 text-md font-bold hover:bg-blue-600 hover:text-white transition duration-200 focus:bg-blue-800 focus:text-white focus:border-blue-800 border-2 border-blue-600 rounded-lg px-7 py-1'>
+						className='m-3 text-md font-bold hover:bg-blue-500 hover:text-white transition duration-200 focus:bg-blue-800 focus:text-white focus:border-blue-800 border-2 border-blue-500 rounded-lg px-5 py-0.5'>
 						Login
 					</Link>
 				) : (

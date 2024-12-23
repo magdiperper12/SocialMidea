@@ -1,11 +1,11 @@
 import Image from 'next/image';
 import React from 'react';
-import image from '../../../assets/image1.webp';
-import image2 from '../../../assets/image2.webp';
-import image3 from '../../../assets/image3.jpg';
-import image4 from '../../../assets/image4.jpg';
-import image5 from '../../../assets/image5.webp';
-import image6 from '../../../assets/image6.webp';
+import image from '../../../../assets/image1.webp';
+import image2 from '../../../../assets/image2.webp';
+import image3 from '../../../../assets/image3.jpg';
+import image4 from '../../../../assets/image4.jpg';
+import image5 from '../../../../assets/image5.webp';
+import image6 from '../../../../assets/image6.webp';
 import Link from 'next/link';
 function Stories() {
 	const story = [
