@@ -2,6 +2,7 @@ import { ClerkProvider } from '@clerk/nextjs';
 import Navbar from './component/header/navbar';
 import LeftSide from './component/leftside/left-side';
 import RightSide from './component/rightside/right-side';
+import './globals.css';
 
 export const metadata = {
 	title: 'Historic Social',
