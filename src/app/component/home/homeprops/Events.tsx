@@ -64,8 +64,9 @@ function Events() {
 				<div
 					className='flex justify-start items-center gap-3'
 					key={index}>
-					{items.icon}
-					{items.text}
+					<span className='text-blue-500 '> {items.icon}</span>
+
+					<span className='text-gray-600'>{items.text}</span>
 				</div>
 			))}
 		</div>
