@@ -36,3 +36,6 @@ body {
 .animate-timer {
 	animation: timer 12s linear forwards;
 }
+.f {
+	color: 'blue';
+}
