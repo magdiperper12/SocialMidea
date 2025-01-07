@@ -16,7 +16,7 @@ function Feed() {
 			/>
 			<Comment
 				username='ahmed mohsen'
-				comments='from feed this is my description hello from feed this is my description comment'
+				comments='from  this is my description hello from feed this is my description comment'
 				imagecomment={image3}
 			/>
 		</div>
