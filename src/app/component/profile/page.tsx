@@ -19,7 +19,7 @@ function Profile() {
 					time='3:05 12/12/2024'
 					userimage={image}
 					image={image2}
-					description='from feed this is my description hello from feed this is my description'
+					description='from  this is my description hello from feed this is my description'
 				/>
 				<Comment
 					username='ahmed mohsen'
