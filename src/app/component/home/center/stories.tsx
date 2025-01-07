@@ -74,7 +74,7 @@ function Stories() {
 									/>
 								)}
 							</div>
-							<span className='text-blue-200 '>magdi perper</span>
+							<span className='text-blue-200 '>magdi saleh</span>
 						</div>
 						{photo && (
 							<Image
