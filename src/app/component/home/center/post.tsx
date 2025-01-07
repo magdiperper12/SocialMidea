@@ -83,7 +83,7 @@ function Post({ name, time, userimage, image, description }: PostProps) {
 						<button className='text-blue-600'>
 							<FaLocationArrow className='text-sm' />
 						</button>
-						<div className='text-gray-600 text-sm'>|</div>
+						<div className='text-gray-600 text-sm'> | </div>
 						<div className='text-gray-600 text-sm'>
 							3 <span className='hidden md:inline'>Share</span>
 						</div>
