@@ -19,9 +19,7 @@ function Birthday() {
 							className='w-12 h-12 '
 						/>
 					</div>
-					<h2 className='font-bold md:text-nowrap lg:text-wrap'>
-						fanni pirdage
-					</h2>
+					<h2 className='font-bold md:text-nowrap lg:text-wrap'>fanni Pidge</h2>
 				</div>
 				<button className='bg-blue-600 text-white md:px-1 lg:px-4  py-1 rounded-lg mt-2 text-sm hover:bg-blue-800 duration-150 hover:scale-95'>
 					Celebrate
