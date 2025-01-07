@@ -34,8 +34,8 @@ function Ads() {
 			</div>
 			<div className='flex justify-between items-center p-4  rounded-lg '>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero amet eum
-				ab esse voluptatibus a minima, sit aliquid ex nesciunt accusamus
-				perspiciatis aut quasi aliquam possimus deleniti dolor quos aspernatur?
+				ab esse voluptatibus , sit aliquid ex nesciunt accusamus perspiciatis
+				aut quasi aliquam possimus deleniti dolor quos aspernatur?
 			</div>
 			<div className='flex justify-center items-center  p-2 bg-slate-200 rounded-lg '>
 				Learn More
