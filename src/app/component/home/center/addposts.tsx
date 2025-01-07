@@ -126,7 +126,7 @@ function Addposts() {
 									src={video}
 									type='video/mp4'
 								/>
-								Your browser does not support the video tag.
+								browser does not support the video tag.
 							</video>
 						</div>
 					)}
