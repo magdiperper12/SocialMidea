@@ -10,14 +10,14 @@ function MobileNav() {
 	const [isOpen, setIsOpen] = useState(false);
 	const headerData = [
 		{ name: 'Home', link: '/', image: '/home.png' },
-		{ name: 'Profile', link: '/profile', image: '/noAvatar.png' },
-		{ name: 'Friends', link: '/friends', image: '/friends.png' },
+		{ name: 'Profile', link: '/component/profile', image: '/noAvatar.png' },
+		{ name: 'Friends', link: '/component/friends', image: '/friends.png' },
 		{ name: 'Group', link: '/group', image: '/groups.png' },
 		{ name: 'Stories', link: '/stories', image: '/stories.png' },
 		{ name: 'Login', link: '/login', image: '/work.png' },
 	];
 	return (
-		<div className='flex  justify-between w-full '>
+		<div className='flex items-center  justify-between w-full '>
 			<div className=''>
 				<Logo />
 			</div>
@@ -40,7 +40,7 @@ function MobileNav() {
 						} origin-left duration-200`}></div>
 
 					{isOpen && (
-						<div className='absolute start-0 top-12 w-full gap-1 text-lg  bg-white h-[calc(100vh-48px)] z-10 duration-200  flex flex-col justify-center items-center'>
+						<div className='absolute start-0 top-16 w-full gap-1 text-lg  bg-white h-[calc(100vh-48px)] z-10 duration-200  flex flex-col justify-center items-center'>
 							<ul className='flex flex-col md:flex-row justify-center md:justify-start'>
 								{headerData.map((item, index) => (
 									<li

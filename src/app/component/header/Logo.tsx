@@ -6,7 +6,7 @@ function Logo() {
 	return (
 		<Link
 			href={'/'}
-			className='text-blue-600  text-xl md:text-2xl lg:text-3xl xl:text-5xl font-bold flex justify-start ps-5  items-center   '>
+			className='text-blue-600  text-3xl  xl:text-5xl font-bold flex justify-start ps-5  items-center   '>
 			<SlSocialFoursqare />
 		</Link>
 	);
